@@ -1,0 +1,128 @@
+{% extends 'basic.html' %}
+{% block title %}contact
+{% endblock title %}
+{% block body %}
+{% load static %}
+<h1 class="text-center text-success">Contact Page </h1>
+<div class="back_re">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="title">
+                 <h2>Contact Us</h2>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!--  contact -->
+ <div class="contact">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-6">
+             <form id="request" class="main_form" action="/contact" method="post">
+      
+                  {%csrf_token%}
+                  
+
+
+                <div class="row">
+                   <div class="col-md-12 ">
+                      <input class="contactus" placeholder="Name" type="type" name="Name"> 
+                   </div>
+                   <div class="col-md-12">
+                      <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                   </div>
+                   <div class="col-md-12">
+                      <input class="contactus" placeholder="Phone Number" type="type" name="Phone ">                          
+                   </div>
+                   <div class="col-md-12">
+                      <textarea class="textarea" placeholder="Message" type="type"  name="Message">Message</textarea>
+                   </div>
+                   <div class="col-md-12">
+                      <button class="send_btn">Send</button>
+                   </div>
+                </div>
+             </form>
+          </div>
+          <div class="col-md-6">
+             <div class="map_main">
+                <div class="map-responsive">
+                   <iframe src="/static/https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <!-- end contact -->
+ <!--  footer -->
+ <footer>
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class=" col-md-4">
+                <h3>Contact US</h3>
+                <ul class="conta">
+                   <li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
+                   <li><i class="fa fa-mobile" aria-hidden="true"></i> +01 1234569540</li>
+                   <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> demo@gmail.com</a></li>
+                </ul>
+             </div>
+             <div class="col-md-4">
+                <h3>Menu Link</h3>
+                <ul class="link_menu">
+                   <li><a href="#">Home</a></li>
+                   <li><a href="about.html"> about</a></li>
+                   <li><a href="room.html">Our Room</a></li>
+                   <li><a href="gallery.html">Gallery</a></li>
+                   <li><a href="blog.html">Blog</a></li>
+                   <li class="active"><a href="contact.html">Contact Us</a></li>
+                </ul>
+             </div>
+             <div class="col-md-4">
+                <h3>News letter</h3>
+                <form class="bottom_form">
+                   <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+                   <button class="sub_btn">subscribe</button>
+                </form>
+                <ul class="social_icon">
+                   <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                   <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                   <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                   <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                </ul>
+             </div>
+          </div>
+       </div>
+       <div class="copyright">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-10 offset-md-1">
+                 <!--  <p>
+                      © 2019 All Rights Reserved. Design by <a href="/static/https://html.design/"> Free Html Templates</a>
+                      <br><br>
+                      Distributed by <a href="/static/https://themewagon.com/" target="_blank">ThemeWagon</a>
+                      </p>-->
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
+ <!-- end footer -->
+ <!-- Javascript files-->
+ <script src="/static/js/jquery.min.js"></script>
+ <script src="/static/js/bootstrap.bundle.min.js"></script>
+ <script src="/static/js/jquery-3.0.0.min.js"></script>
+ <!-- sidebar -->
+ <script src="/static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+ <script src="/static/js/custom.js"></script>
+</body>
+</html>
+
+
+
+
+
+{% endblock body %}
